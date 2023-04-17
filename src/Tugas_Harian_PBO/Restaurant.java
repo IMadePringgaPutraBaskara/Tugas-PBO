@@ -8,6 +8,8 @@ public class Restaurant {
     private String id;
     private String name;
     private String alamat;
+    static ArrayList<Restaurant> restaurants = new ArrayList<>();
+
     private List<Menu> menus;
 
     public Restaurant(String id, String name, String alamat, List<Menu> menus) {
@@ -33,7 +35,10 @@ public class Restaurant {
         return menus;
     }
 
-    public static Restaurant createRestaurant() {
+    public static void addRestaurant(Restaurant restaurant){
+        restaurants.add(restaurant);
+    }
+    public static void createRestaurant() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Masukkan ID Restaurant: ");
@@ -78,9 +83,26 @@ public class Restaurant {
             System.out.println("ID: " + menu.getId() + " - " + menu.getName() + " - Rp " + menu.getPrice());
         }
 
-        return restaurant;
+addRestaurant(restaurant);
     }
+
+    public static void showRestaurants() {
+        System.out.println("\nData Restaurant:");
+        for (Restaurant restaurant : restaurants) {
+            System.out.println("ID: " + restaurant.getId());
+            System.out.println("Nama: " + restaurant.getName());
+            System.out.println("Alamat: " + restaurant.getAlamat());
+            System.out.println("Menu: ");
+            for (Menu menu : restaurant.getMenus()) {
+                System.out.println("ID: " + menu.getId() + " - " + menu.getName() + " - Rp " + menu.getPrice());
+            }
+            System.out.println("=========================");
+        }
+    }
+
 }
+
+
 
 class Menu {
     private String id;

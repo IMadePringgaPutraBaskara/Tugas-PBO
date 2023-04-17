@@ -6,27 +6,27 @@ import java.util.Scanner;
 
 public class Admin extends user {
     private Scanner scanner;
-    private List<Restaurant> restaurants;
+//    static ArrayList<Restaurant> restaurants;
 
     public Admin(String username, String password) {
         super(username, password);
         scanner = new Scanner(System.in);
-        restaurants = new ArrayList<>();
+//        restaurants = new ArrayList<>();
     }
 
-    private void showRestaurants() {
-        System.out.println("\nData Restaurant:");
-        for (Restaurant restaurant : restaurants) {
-            System.out.println("ID: " + restaurant.getId());
-            System.out.println("Nama: " + restaurant.getName());
-            System.out.println("Alamat: " + restaurant.getAlamat());
-            System.out.println("Menu: ");
-            for (Menu menu : restaurant.getMenus()) {
-                System.out.println("ID: " + menu.getId() + " - " + menu.getName() + " - Rp " + menu.getPrice());
-            }
-            System.out.println("=========================");
-        }
-    }
+//    public static void showRestaurants() {
+//        System.out.println("\nData Restaurant:");
+//        for (Restaurant restaurant : restaurants) {
+//            System.out.println("ID: " + restaurant.getId());
+//            System.out.println("Nama: " + restaurant.getName());
+//            System.out.println("Alamat: " + restaurant.getAlamat());
+//            System.out.println("Menu: ");
+//            for (Menu menu : restaurant.getMenus()) {
+//                System.out.println("ID: " + menu.getId() + " - " + menu.getName() + " - Rp " + menu.getPrice());
+//            }
+//            System.out.println("=========================");
+//        }
+//    }
 
     @Override
     public void showMenu() {
@@ -42,37 +42,38 @@ public class Admin extends user {
         while (!validChoice) {
             switch (choice) {
                 case "1":
-                    showRestaurants();
+//                    restaurants.get(0);
+                    Restaurant.showRestaurants();
                     showMenu();
                     validChoice = true;
                     break;
                 case "2":
-                    Restaurant restaurant = Restaurant.createRestaurant();
-                    restaurants.add(restaurant);
+                    Restaurant.createRestaurant();
+//                    restaurants.add(restaurant);
                     System.out.println("Data Restaurant berhasil ditambahkan!");
                     showMenu();
                     validChoice = true;
                     break;
                 case "3":
                     System.out.print("Masukkan ID Restaurant yang ingin dihapus: ");
-                    String idToDelete = scanner.nextLine();
-
-                    boolean isFound = false;
-                    for (int i = 0; i < restaurants.size(); i++) {
-                        if (restaurants.get(i).getId().equals(idToDelete)) {
-                            restaurants.remove(i);
-                            System.out.println("Restoran dengan ID " + idToDelete + " telah dihapus.");
-                            isFound = true;
-                            break;
-                        }
-                    }
-
-                    if (!isFound) {
-                        System.out.println("Restoran dengan ID " + idToDelete + " tidak ditemukan.");
-                    }
-
-                    showMenu();
-                    validChoice = true;
+//                    String idToDelete = scanner.nextLine();
+//
+//                    boolean isFound = false;
+//                    for (int i = 0; i < restaurants.size(); i++) {
+//                        if (restaurants.get(i).getId().equals(idToDelete)) {
+//                            restaurants.remove(i);
+//                            System.out.println("Restoran dengan ID " + idToDelete + " telah dihapus.");
+//                            isFound = true;
+//                            break;
+//                        }
+//                    }
+//
+//                    if (!isFound) {
+//                        System.out.println("Restoran dengan ID " + idToDelete + " tidak ditemukan.");
+//                    }
+//
+//                    showMenu();
+//                    validChoice = true;
                     break;
                 case "4":
                     Login_Page login_page = new Login_Page();
@@ -88,7 +89,7 @@ public class Admin extends user {
         }
     }
 
-    public List<Restaurant> getRestaurants() {
-        return restaurants;
-    }
+//    public List<Restaurant> getRestaurants() {
+//        return restaurants;
+//    }
 }
