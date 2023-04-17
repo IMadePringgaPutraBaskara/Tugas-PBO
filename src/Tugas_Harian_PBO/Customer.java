@@ -2,7 +2,7 @@ package Tugas_Harian_PBO;
 
 import java.util.Scanner;
 
-public class Customer extends User {
+public class Customer extends user {
     private Scanner scanner;
 
 

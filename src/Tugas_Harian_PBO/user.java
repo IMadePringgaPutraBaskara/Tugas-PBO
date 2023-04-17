@@ -1,10 +1,10 @@
 package Tugas_Harian_PBO;
 
-class User {
+class user {
     private String username;
     private String password;
 
-    public User(String username, String password) {
+    public user(String username, String password) {
         this.username = username;
         this.password = password;
     }
