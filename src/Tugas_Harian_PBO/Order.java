@@ -18,29 +18,29 @@ public class Order {
         this.distance = distance;
     }
 
-    public Restaurant getRestaurant() {
+    public Restaurant getResto() {
         return restaurant;
     }
 
-    public List<OrderItem> getOrderItems() {
+    public List<OrderItem> getitemorder() {
         return orderItems;
     }
 
-    public int getDistance() {
+    public int getJarak() {
         return distance;
     }
 
-    public int getDeliveryCost() {
+    public int getOngkir() {
         int costPerKm = 5000;
         return distance * costPerKm;
     }
 
-    public int getTotalPrice() {
+    public int getTotal() {
         int totalPrice = 0;
         for (OrderItem orderItem : orderItems) {
             totalPrice += orderItem.getSubtotal();
         }
-        int deliveryCost = getDeliveryCost();
+        int deliveryCost = getOngkir();
         int totalAdminCharge = AdminCharge;
         totalPrice += deliveryCost + totalAdminCharge;
         return totalPrice;
@@ -97,7 +97,7 @@ public class Order {
             }
         }
 
-        System.out.print("Masukkan Jarak Antar (dalam kilometer): ");
+        System.out.print("Berapa Jarak Lokasi Rumah Anda Dari Restoran :");
         int distance = scanner.nextInt();
         scanner.nextLine();
 
@@ -105,38 +105,41 @@ public class Order {
 
         System.out.println("\nDetail Pesanan:");
         System.out.println("Restaurant:");
-        System.out.println("ID: " + order.getRestaurant().getId());
-        System.out.println("Nama: " + order.getRestaurant().getName());
-        System.out.println("Alamat: " + order.getRestaurant().getAlamat());
+        System.out.println("ID: " + order.getResto().getId());
+        System.out.println("Nama: " + order.getResto().getName());
+        System.out.println("Alamat: " + order.getResto().getAlamat());
         System.out.println("Menu: ");
-        for (OrderItem orderItem : order.getOrderItems()) {
+        for (OrderItem orderItem : order.getitemorder()) {
             System.out.println(orderItem.getMenu().getName() + " - " + orderItem.getQuantity() + "x - Rp " + orderItem.getMenu().getPrice());
         }
-        System.out.println("Jarak Antar: " + order.getDistance() + " km");
-        System.out.println("Biaya Antar: " + order.getDeliveryCost());
+        System.out.println("Jarak Antar: " + order.getJarak() + " km");
+        System.out.println("Biaya Antar: " + order.getOngkir());
         System.out.println("Biaya Admin: Rp. 2000");
-        System.out.println("Total Harga: Rp. " + order.getTotalPrice());
+        System.out.println("Total Harga: Rp. " + order.getTotal());
         addOrder(order);
     }
 
     public static void showOrders() {
+        Scanner scan = new Scanner(System.in);
         if (orders.isEmpty()) {
             System.out.println("\nBelum ada data pesanan yang tersimpan.");
         } else {
             for (Order order : orders) {
                 System.out.println("\nDetail Pesanan:");
                 System.out.println("Restaurant:");
-                System.out.println("ID: " + order.getRestaurant().getId());
-                System.out.println("Nama: " + order.getRestaurant().getName());
-                System.out.println("Alamat: " + order.getRestaurant().getAlamat());
+                System.out.println("ID: " + order.getResto().getId());
+                System.out.println("Nama: " + order.getResto().getName());
+                System.out.println("Alamat: " + order.getResto().getAlamat());
                 System.out.println("Menu: ");
-                for (OrderItem orderItem : order.getOrderItems()) {
+                for (OrderItem orderItem : order.getitemorder()) {
                     System.out.println(orderItem.getMenu().getName() + " - " + orderItem.getQuantity() + "x - Rp " + orderItem.getMenu().getPrice());
                 }
-                System.out.println("Jarak Antar: " + order.getDistance() + " km");
-                System.out.println("Biaya Antar: " + order.getDeliveryCost());
+                System.out.println("Jarak Antar: " + order.getJarak() + " km");
+                System.out.println("Biaya Antar: " + order.getOngkir());
                 System.out.println("Biaya Admin: Rp. 2000");
-                System.out.println("Total Harga: Rp. " + order.getTotalPrice());
+                System.out.println("Total Harga: Rp. " + order.getTotal());
+                System.out.print("\nTekan Enter Untuk Melanjutkan... ");
+                scan.nextLine();
             }
         }
     }

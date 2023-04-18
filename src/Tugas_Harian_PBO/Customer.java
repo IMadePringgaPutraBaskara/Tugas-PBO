@@ -1,39 +1,14 @@
 package Tugas_Harian_PBO;
 
-import Tugas_Harian_PBO.Login_Page;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Customer extends user {
     private Scanner scanner;
-//    private List<Restaurant> restaurants;
 
     public Customer(String username, String password) {
         super(username, password);
         scanner = new Scanner(System.in);
-//        restaurants = new ArrayList<>();
     }
-
-//    private void showRestaurants() {
-////        List<Restaurant> restaurants = getRestaurants();
-//        System.out.println("\nData Restaurant:");
-//        for (Restaurant restaurant : restaurants) {
-//            System.out.println("ID: " + restaurant.getId());
-//            System.out.println("Nama: " + restaurant.getName());
-//            System.out.println("Alamat: " + restaurant.getAlamat());
-//            System.out.println("Menu: ");
-//            for (Menu menu : restaurant.getMenus()) {
-//                System.out.println("ID: " + menu.getId() + " - " + menu.getName() + " - Rp " + menu.getPrice());
-//            }
-//            System.out.println("=========================");
-//        }
-//    }
-
-//    public List<Restaurant> getRestaurants() {
-//        return restaurants;
-//    }
 
     @Override
     public void showMenu() {
@@ -54,11 +29,13 @@ public class Customer extends user {
                     validChoice = true;
                     break;
                 case "2":
-                    System.out.println("Pastikan data yang anda masukkan benar");
+                    Order.createOrder();
+                    showMenu();
                     validChoice = true;
                     break;
                 case "3":
-                    System.out.println("Pastikan data yang anda masukkan benar");
+                    Order.showOrders();
+                    showMenu();
                     validChoice = true;
                     break;
                 case "4":

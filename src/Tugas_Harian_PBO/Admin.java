@@ -14,20 +14,6 @@ public class Admin extends user {
 //        restaurants = new ArrayList<>();
     }
 
-//    public static void showRestaurants() {
-//        System.out.println("\nData Restaurant:");
-//        for (Restaurant restaurant : restaurants) {
-//            System.out.println("ID: " + restaurant.getId());
-//            System.out.println("Nama: " + restaurant.getName());
-//            System.out.println("Alamat: " + restaurant.getAlamat());
-//            System.out.println("Menu: ");
-//            for (Menu menu : restaurant.getMenus()) {
-//                System.out.println("ID: " + menu.getId() + " - " + menu.getName() + " - Rp " + menu.getPrice());
-//            }
-//            System.out.println("=========================");
-//        }
-//    }
-
     @Override
     public void showMenu() {
         System.out.println("\nMenu Admin OOF:");
@@ -56,24 +42,7 @@ public class Admin extends user {
                     break;
                 case "3":
                     System.out.print("Masukkan ID Restaurant yang ingin dihapus: ");
-//                    String idToDelete = scanner.nextLine();
-//
-//                    boolean isFound = false;
-//                    for (int i = 0; i < restaurants.size(); i++) {
-//                        if (restaurants.get(i).getId().equals(idToDelete)) {
-//                            restaurants.remove(i);
-//                            System.out.println("Restoran dengan ID " + idToDelete + " telah dihapus.");
-//                            isFound = true;
-//                            break;
-//                        }
-//                    }
-//
-//                    if (!isFound) {
-//                        System.out.println("Restoran dengan ID " + idToDelete + " tidak ditemukan.");
-//                    }
-//
-//                    showMenu();
-//                    validChoice = true;
+
                     break;
                 case "4":
                     Login_Page login_page = new Login_Page();
@@ -89,7 +58,4 @@ public class Admin extends user {
         }
     }
 
-//    public List<Restaurant> getRestaurants() {
-//        return restaurants;
-//    }
 }
