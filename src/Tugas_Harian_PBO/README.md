@@ -5,6 +5,13 @@ I Made Pringga Putra Baskara
 
 Program Restoran sederhana ini menggunakan gambaran dari bagaimana sistem dari pembelian pada restoran dari segi admin dan customer. Program ini menggunakan bahasa Java. 
 
+## UML
+
+UML atau Unified Modeling Language class diagram merupakan gambaran diagaram yang berguna untuk menampilkan struktur dari program yang dibuat. Berikut merupakan contoh dari UML program restaurant yang sudah dibuat
+
+![UML](/img/UML.png "UML")
+
+
 ## Alur Program
 
 Dibawah ini akan menampilkan langkah - langkah dari Program Restoran yang dibuat
