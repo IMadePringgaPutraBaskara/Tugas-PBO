@@ -5,13 +5,9 @@ I Made Pringga Putra Baskara
 
 Program Restoran sederhana ini menggunakan gambaran dari bagaimana sistem dari pembelian pada restoran dari segi admin dan customer. Program ini menggunakan bahasa Java. 
 
-## UML
-Dibawah ini akan menampilkan langkah - langkah dari Program Restoran yang dibuat
-
-![UML](/img/UML.png "UML")
-
 ## Alur Program
 
+Dibawah ini akan menampilkan langkah - langkah dari Program Restoran yang dibuat
 
 ### LOGIN
 
@@ -27,7 +23,7 @@ Username dan Password Admin
 
 - Menu Tampilan dari Login Admin
 
-![Login](/img/Login%20Admin.png "Login")
+![Login](/img/login.png "Login")
 
 - Menu Admin jika sudah berhasil Login
 
