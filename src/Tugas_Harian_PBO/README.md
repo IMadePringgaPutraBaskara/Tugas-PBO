@@ -9,7 +9,9 @@ Program Restoran sederhana ini menggunakan gambaran dari bagaimana sistem dari p
 
 UML atau Unified Modeling Language class diagram merupakan gambaran diagaram yang berguna untuk menampilkan struktur dari program yang dibuat. Berikut merupakan contoh dari UML program restaurant yang sudah dibuat
 
-![UML](/img/UML.png "UML")
+
+<img width="602" alt="Screenshot 2023-04-18 234838" src="https://user-images.githubusercontent.com/114967494/232848581-5bdc89d9-49a2-4df5-b400-f93ff2410164.png">
+
 
 
 ## Alur Program
@@ -29,24 +31,26 @@ Username dan Password Admin
 `Password : 2708`
 
 - Menu Tampilan dari Login Admin
+<img width="129" alt="Screenshot 2023-04-18 132539" src="https://user-images.githubusercontent.com/114967494/232848833-a1892d45-71a0-481e-96fd-44ce6cbfb797.png">
 
-![Login](/img/login.png "Login")
 
 - Menu Admin jika sudah berhasil Login
 
-![Menu Admin](/img/Menu%20Admin.png "Menu Admin")
+<img width="164" alt="Screenshot 2023-04-18 133449" src="https://user-images.githubusercontent.com/114967494/232848897-89acbe20-a8f8-45ad-8050-18624bf0f247.png">
 
 - Tampilan Daftar Restoran (Saat belum Menambahkan Restoran)
 
-![List Restaurant](/img/Restoran%20Admin%20no%20data.png "Sebelum Isi data")
+<img width="164" alt="Screenshot 2023-04-18 134024" src="https://user-images.githubusercontent.com/114967494/232848931-027bcd07-e694-4037-8d34-8fe198d5281c.png">
 
 - Tampilan Daftar Restoran (Saat sudah Menambahkan Restoran)
 
-![List Restaurant](/img/Restoran%20Admin%20data.png "Sesudah Isi data")
+<img width="205" alt="Screenshot 2023-04-18 134334" src="https://user-images.githubusercontent.com/114967494/232848980-03214ecf-4d0d-405c-a6e8-7a066794a9c4.png">
+
 
 - Tampilan Mengisi Daftar Restaurant
 
-![Input Restaurant](/img/Inputan%20data%20resto.png "Inputan Data Restaurant")
+<img width="269" alt="Screenshot 2023-04-18 134858" src="https://user-images.githubusercontent.com/114967494/232849013-40828d56-fdf0-4261-bf1b-f7c368076e43.png">
+
 
 
 **Customer**
@@ -59,19 +63,20 @@ Username dan Password Customer
 
 - Tampilan Login Customer
 
-![Login](/img/Login%20Customer.png "Login Customer")
+<img width="155" alt="Screenshot 2023-04-18 195457" src="https://user-images.githubusercontent.com/114967494/232849044-5d0762de-4a80-4548-b609-03fcfc256253.png">
 
 - Tampilan Customer jika sudah berhasil Login
 
-![MenuCustomer](/img/Menu%20Customer.png "Menu Customer")
+<img width="154" alt="Screenshot 2023-04-18 195742" src="https://user-images.githubusercontent.com/114967494/232849069-1adcf6e4-4210-46d1-8da6-071b41fa1be9.png">
+
 
 - Tampilan Order list untuk Customer
 
-![Mesen](/img/Cara%20mengorder.png "Proses order")
+<img width="230" alt="Screenshot 2023-04-18 201136" src="https://user-images.githubusercontent.com/114967494/232849111-c3893ad0-5b52-4102-a13c-acfe7f0ceb38.png">
 
 - Tampilan Hasil Pesanan 
 
-![Order](/img/Order.png "Tampilan Order")
+<img width="321" alt="Screenshot 2023-04-18 201243" src="https://user-images.githubusercontent.com/114967494/232849170-f1d47c69-ddcb-4591-9ca3-79420cf50581.png">
 
 ## Penutup
 
